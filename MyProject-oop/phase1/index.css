@@ -1,0 +1,838 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+:root{
+    --font-size: 1rem;
+    --font-family: "fraunce", serif;
+    --font-weight: bolder;
+    --text-transform: capitalize;
+    --background-color: #2f3c7e;
+    --color: #fff;
+    --transition: .2s;
+    --background-color2: #fbeaeb;
+    /* the second variables here*/
+    --font-size2: 1.6rem;
+    --font-family2: sans;
+}
+/* the header styling start here */
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: var(--background-color);
+    position: fixed;
+    padding: 1% 8%;
+}
+.logo{
+    width: 100px;
+    height: 50px;
+    margin-right: auto;
+}
+nav .logo{
+    display: none;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+nav ul li a{
+    color: var(--color);
+    padding: 10px;
+    text-decoration: none;
+    font-size: var(--font-size);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-family: var(--font-family);
+    position: relative;
+}
+nav ul li a::before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color);
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:transform .4s linear;
+}
+nav ul li a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+nav .fa{
+    display: none;
+}
+.header .fa{
+    display: none;
+}
+nav .media{
+    display: none;
+}
+nav .media a{
+    margin-right: 3%;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+}
+nav .media a:hover{
+    color: rgb(187, 56, 8);
+    transition: 0.5s;
+}
+/* the header styling ends here */
+
+/* the landing page styling start here */
+.landing{
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 5%;
+}
+.content{
+    margin-top: 5%;
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(16, 59, 146, 0.75),rgba(53, 153, 211, 0.75)),url(image/emotional-bearded-male-has-surprised-facial-expression-astonished-look-dressed-white-shirt-with-red-braces-points-with-index-finger-upper-right-corner_273609-16001.avif);
+    background-position: center;
+    background-size: cover;   
+}
+.content h1{
+    color: var(--color);
+    font-size: 7rem;
+    font-weight: bolder;
+    font-family: var(--font-family2);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+.content p{
+    margin-left: 30%;
+    color: white;
+    font-size: var(--font-size);
+    margin-bottom: 4%;
+}
+.content p span{
+    background: white;
+    color: orangered;
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-left: 3%;
+}
+.content a{
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: var(--font-size);
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    padding: 15px;
+    background-color: black;
+    width: 120px;
+    margin-left: 45%;
+    margin-right: 45%;
+    transform: translate(-40% 40%);
+    cursor: pointer;
+}
+.content a:hover{
+    background: rgb(26, 26, 26);
+    transition: 0.5s;
+    color: white;
+}
+/* the landing page styling ends here */
+
+/* the buying styling start here */
+.buying{
+    width: 100%;
+    padding: 2% 10%;
+    background: rgb(255, 246, 246);
+}
+.buying h1{
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-transform: var(--text-transform);
+    font-weight: var(--font-weight);
+    color: black;
+    margin-bottom: 5%;
+
+}
+.details_box{
+    width: 110%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.box{
+    text-align: center;
+    padding: 18px;
+    flex: 1 1 1rem;
+    border-radius: 5px;
+    background: white;
+    border-top: 3px solid#2e43ad;
+    margin-right: 5%;
+    box-shadow: 4px 4px 5px rgb(119, 117, 116);
+    transition:  0.2s;
+}
+.box .fa{
+    font-size: 2.5rem;
+    color: #2e43ad;
+    margin-bottom: 4%;
+}
+.box h2{
+    font-size: 2rem;
+    font-family: var(--font-family2);
+    font-weight: var(--font-weight);
+    letter-spacing: 2px;
+    text-transform: var(--text-transform);
+    font-weight: var(--font-weight);
+    margin-bottom: 5%;
+}
+.box p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    margin-bottom: 10%;
+}
+.box a{
+    padding: 10px;
+    text-align: center;
+    background: #2e43ad;
+    color: white;
+    font-size: var(--font-size);
+    letter-spacing: 2px;
+    text-transform: var(--text-transform);
+    text-decoration: none;
+    border-radius: 10px;
+}
+.box a:hover{
+    background-color: var(--background-color);
+    border: transparent;
+    transition: .2s;
+}
+/* the buying styling box ends here */
+
+/* the wallet styling start here */
+.wallet{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2e43ad;
+}
+.fund{
+    width: 70%;
+    padding: 2% 2%;
+    background: white;
+    box-shadow: 4px 4px 5px rgb(102, 201, 235);
+    text-align: center;
+    border-radius: 2px;
+}
+.fund .fa{
+    font-size: 3rem;
+    color: #2e43ad;
+    margin-bottom: 1%;
+}
+.fund h1{
+    font-size: 3rem;
+    color: black;
+    letter-spacing: 2px;
+    font-family: var(--font-size);
+    font-weight: var(--font-weight);
+    text-transform: var(--text-transform);
+    margin-bottom: 2%;
+}
+.fund p{
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-family: var(--font-family);
+    text-transform: var(--text-transform);
+    margin-bottom: 3%;
+    text-align: center;
+}
+.fund a{
+    padding: 10px;
+    text-align: center;
+    text-transform: var(--text-transform);
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    background-color: #2e43ad;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 3%;
+    border-radius: 10px;
+}
+.fund a:hover{
+    transition: var(--transition);
+    background: var(--background-color);
+}
+/* the wallet styling ends here */
+
+/* the price section styling start here */
+.pricing{
+    width: 100%;
+    height: 110vh;
+    padding: 2% 5%;
+    background: rgb(255, 246, 246);
+    
+}
+.pricing h1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: var(--font-weight);
+    font-family: var(--font-family);
+    text-transform: var(--text-transform);
+    letter-spacing: 2px;
+    margin-bottom: 2%;
+}
+.pricing p{
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: var(--font-family2);
+    letter-spacing: 2px;
+    text-transform: var(--text-transform);
+    margin-bottom: 3%;
+}
+.pricing table{
+    border-collapse: collapse;
+    width: 80%;
+    height: 500px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    transform: translate(-10% -10%);
+    margin-bottom: 5%;
+}
+.pricing table thead tr th{
+    padding: 10px;
+    text-align: left;
+    border: 1px solid black;
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    font-weight: 500;
+    text-transform: var(--text-transform);
+}
+.pricing table thead tr th span{
+    color: blue;
+    font-weight: 600;
+    margin-right: 1%;
+}
+.pricing table tbody tr td{
+    text-align: justify;
+    padding: 10px;
+    margin-left: 2%;
+}
+.pricing a{
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    text-transform: var(--text-transform);
+    font-family: var(--font-family);
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding: 10px; 
+    border-radius: 10px;
+    background: #2e43ad;
+    margin-left: 45%;
+    margin-right: 40%;    
+    transform: translate(-45% -40%);
+
+}
+.pricing a:hover{
+    background-color: var(--background-color);
+    transition: var(--transition);
+}
+/* the price section styling ends here */
+
+
+/* the info styling start here */
+.info{
+    width: 100%;
+    padding: 2% 5%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(230, 228, 228);
+}
+.telling{
+    width: 50%;
+    text-align: center;
+    
+}
+.telling h1{
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--font-family);
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: var(--text-transform);
+    margin-bottom: 3%;
+
+}
+.telling p{
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.5em;
+    font-family: var(--font-family2);
+    letter-spacing: 1px;
+    margin-bottom: 3%;
+    cursor: text;
+}
+.info img{
+    width: 35%;
+    border: transparent;
+}
+/* the info styling ends here */
+
+/* the summery img styling start here */
+.summery{
+    width: 100%;
+    height: 30vh;
+    margin: 0 auto;
+}
+.sum{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.sum img{
+    width: 100px;
+    display: flex;
+    margin-right: 2%;
+    box-shadow: 4px 4px 5px rgb(95, 131, 143);
+    border-radius: 10px;
+}
+.summery a{
+    font-size: 1.2rem;
+    font-family: var(--font-family);
+    letter-spacing: 2px;
+    text-transform: var(--text-transform);
+    padding: 10px;
+    background: #2e43ad;
+    border-radius: 10px;
+    color: var(--color);
+    text-decoration: none;
+    text-align: center;
+    margin-left: 45%;
+    margin-right: 40%;
+    transform: translate(-45% -40%);
+    margin-bottom: 2%;
+    cursor: poiner;
+
+}
+.summery a:hover{
+  transition: var(--transition);      
+  background: var(--background-color);
+}
+/* the summery img styling ends here */
+
+/* the footer styling start here */
+.footer{
+    width: 100%;
+    height: 60vh;
+    background-color: rgb(31, 29, 29);
+    margin-top: 4%;
+    padding: 4% 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.details{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgb(59, 58, 58);
+    padding: 10px;
+}
+.box_details{
+    width: 25%;
+    margin-right: 3%;
+}
+#boxdetails{
+    margin-right: -2%;
+}
+#boxdetails a{
+    display: block;
+    color: rgb(160, 153, 153);
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-bottom: 2%;
+    letter-spacing: 2px;
+}
+#boxdetails a:hover{
+    color: rgb(132, 50, 20);
+    transition: 0.5s;
+}
+.details a img{
+    width: 170px;
+    margin-top: 50%;
+}
+.box_details h1{
+    color: var(--color);
+    font-size: var(--font-size);
+    font-family: sans-serif;
+    font-weight: bolder;
+    text-transform: var(--text-transform);
+    letter-spacing: 2px;
+    margin-bottom: 4%;
+}
+.box_details p{
+    color: rgb(160, 153, 153);
+    font-size: 15px;
+    font-family: sans-serif;
+    margin-bottom: 4%;
+}
+.box_details h4{
+    color: var(--color);
+    font-weight: 500;
+    text-transform: var(--text-transform);
+    letter-spacing: 2px;
+    font-family: serif;
+    margin-bottom: 3%;
+}
+.media{
+    display: flex;
+    margin-bottom: 5%;
+}
+.media a{
+    margin-right: 3%;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+}
+.media a:hover{
+    color: rgb(187, 56, 8);
+    transition: 0.5s;
+}
+#detailsbox{
+    text-align: justify;
+}
+#detailsbox a{
+    color: rgb(160, 153, 153);
+    cursor: pointer;
+}
+.fuuter{
+    padding: 1% 10%;
+    background: rgb(31, 29, 29);
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.fuuter a{
+    color: rgb(160, 153, 153);
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: sans;
+    margin-right: 5%;
+}
+.fuuter p{
+    color: rgb(160, 153, 153);
+}
+/* the footer styling ends here */
+
+
+/* the media screen start here */
+
+/* @media only screen  and (max-width: 1000px){
+    .header{
+        width: 100%;
+        padding: 1px 10%;
+        position: fixed;
+    }
+    nav{
+        position: absolute;
+        left: -300px;
+        top: 0;
+        width: 280px;
+        height: 100vh;
+        z-index: 999;
+        background: rgb(21, 19, 19);
+        box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
+        transition: 0.4s;
+    }
+     
+    .logo{
+        margin-top: 4%;
+        margin-left: 3%;
+        margin-bottom: 30px;
+    }
+    nav ul{
+        display:block;
+        margin-left: 3%;
+        margin-bottom: 20%;
+    }
+    nav ul li {
+        padding: 10px;
+        text-align: center;
+    }
+    nav ul li a{
+        font-size: 15px;
+    }
+    nav .fa{
+        text-align: right;
+        margin-right: 10%;
+    }
+    
+    .header .fa{
+        display: block;
+        color: white;
+        font-size: 1.2rem;
+        margin-left: 10%;
+        margin-top: 10%;
+        margin-bottom: 15%; 
+    }
+    .account{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .account a{
+        margin-right: 5%;
+        text-decoration: none;
+        font-size: 20px;
+        text-transform: var(--text-transform);
+        letter-spacing: 2px;
+    }
+    .account a .fa:hover{
+        color: orangered;
+        transition: .4s;
+    }
+    .media{
+        display: flex;
+        margin-bottom: 5%;
+    }
+    .media a{
+        margin-right: 3%;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+        background-color: transparent;
+    }
+    .media a:hover{
+        color: rgb(187, 56, 8);
+        transition: 0.5s;
+    }
+    .landing{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        padding: 3% 4%;
+    }
+    .content{
+        width: 100%;
+        min-height: 50vh;
+    }
+    .content h1{
+        font-size: 3.7rem;
+        margin-top: 15%;
+        margin-bottom: 10%;  
+    }
+    .content p{
+        margin-bottom: 10%;
+    }
+    .content a{
+        margin-left: 30%;
+        margin-right: 30%;
+        transform: translate(-30% -30%);
+    }
+    .buying{
+        width: 100%;
+        padding: 2% 10%;
+        background: rgb(255, 246, 246);
+    }
+    .buying h1{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .details_box{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .box{
+        margin-bottom: 8%;
+        margin-left: 8%;
+        margin-right: 8%;
+        transform: translate(-8% -8%);
+    }
+    .wallet{
+        width: 100%;
+        height: 65vh;
+    }
+    .fund{
+        width: 85%;
+        padding: 4% 3%;
+    }
+    .fund h1{
+        font-size: 2rem;
+    }
+    .fund p{
+        font-size: var(--font-size);
+        margin-bottom: 7%;
+        letter-spacing: 1px;
+    }
+    .pricing{
+        width: 100%;
+        padding: 1% 3%;
+        height: 165vh;
+    }
+    .pricing h1{
+        font-weight: 2.2rem;
+    }
+    .pricing table{
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 70%;
+        margin-bottom: 10%;
+    }
+    .pricing table thead tr th{
+        font-size: 15px;
+    }
+    .pricing table tbody tr td{
+        font-size: 13px;
+    }
+    .pricing a{
+        width: 40%;
+        text-align: center;
+        font-size: 15px;
+        padding: 10px; 
+        margin-left: 34%;
+        margin-right: -30%;
+        letter-spacing: 1px;
+    }
+    .info{
+        width: 100%;
+        height: 120vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .info img{
+        display: flex;
+        flex-direction: column;
+    }
+    .telling{
+        width: 85%;
+        line-height: 1em;
+    }
+    .telling h1{
+        font-size: 2rem;
+        line-height: 1.2em;
+        margin-bottom: 2%;
+    }
+    .telling p{ 
+        font-size: 15px;
+        margin-bottom: 10%;
+    }
+    .telling a img{
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        transform: translate(-30% -30%);
+        margin-bottom: 5%;
+    }
+    .info img{
+        width: 100%;
+    }
+    .summery{
+        width: 100%;
+        padding: 3% 2%;
+        margin-bottom: 35%;
+    }
+    .summery a{
+        width: 40%;
+        text-align: center;
+        font-size: 15px;
+        padding: 10px; 
+        margin-left: 35%;
+        margin-right: -30%;
+        letter-spacing: 1px;
+        margin-bottom: 2%;
+        cursor: pointer;
+    }
+    .sum{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 3% 2%; 
+        margin-bottom: 15%;
+    }
+    .sum img{
+        width: 20%;
+        margin-bottom: 4%;
+        border-radius: 10px;
+    }
+    .footer{
+        width: 100%;
+        height: 150vh;
+        display: flex;
+        align-items: center;
+        
+    }
+    .details .media a{
+        margin-right: 7%;
+    }
+    .details{
+        width: 95%;
+        align-items: center;
+    }
+    .box_details{
+        width: 75%;
+        margin-bottom: 8%;
+    }
+    .box_details h1{
+        font-size: 20px;
+
+    }
+    .box_details h4{
+        font-size: 15px;
+    }
+    .box_details p{
+        font-size: 15px;
+    }
+    #boxdetails{
+        margin-bottom: -10%;
+    }
+    #boxdetails a{
+        margin-bottom: 2%;
+    }
+    .fuuter p{
+        font-size: 15px;
+        margin-bottom: 5%;
+    }
+
+} */
+/* the media screen ends here */

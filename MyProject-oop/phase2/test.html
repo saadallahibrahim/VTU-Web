@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      @media screen and (max-width: 767px){
+        *{
+          margin: 0;
+          padding: 0;
+        }
+          .header{
+              display: flex;
+              /* justify-content: space-between; */
+              align-items: center;
+              width: 100%;
+              padding: 1% 9%;
+              background-color: red;
+              position: fixed;
+          }
+          .logo{
+              width: 90px;
+              height: 80px;
+              
+              margin-right: 50%;
+              /* margin-right: auto; */
+          }
+          nav{
+              position: absolute;
+              left: -300px;
+              top: 0;
+              width: 280px;
+              height: 100vh;
+              z-index: 999;
+              background: rgb(21, 19, 19);
+              box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.5);
+              transition: 0.4s;
+          }
+                nav ul{
+              display:block;
+              margin-left: 3%;
+              margin-bottom: 20%;
+          }
+          nav ul li {
+              padding: 10px;
+              text-align: center;
+          }
+          nav ul li a{
+              font-size: 15px;
+          }
+          .header .fa{
+            display: block;
+            font-size: 2rem;
+            color: white;
+            margin-left: 10%;
+          }
+          nav .fa{
+            display: block;
+            font-size: 2rem;
+            color: white;
+          }
+          /* nav .fa{
+              text-align: right;
+              margin-right: 10%;
+          }
+          .header .fa{
+              display: block;
+              color: white;
+              font-size: 1.9rem;
+              
+              
+          } */
+            
+      }
+    </style>
+</head>
+<body>
+
+
+  <section class="header">
+    <div class="logo">
+      <img src="logo.jpg" class="logo">
+       </div>
+    <nav id="navLinks"> 
+        <i class="fa fa-times" onclick="hideMenu()" id="show"></i>
+        <ul>
+            <li><a href="dashboard.php">Dashboard</a></li>
+            <li><a href="">transactions</a></li>
+            <li><a href="">pricing</a></li>
+            <li><a href="">orders</a></li>
+            <li><a href="">track order</a></li>
+            <li><a href="contact.php">contact</a></li>
+          </ul>
+
+            <!-- <ul class="real">
+                <li><a href="airtime.php">airtime</a></li>
+                <li><a href="data.php">Data</a></li>
+                <li><a href="cable_tv.php">cable tv</a></li>
+                <li><a href="epins.php">ePins</a></li>
+                <li><a href="electricity.php">electricity</a></li>
+            </ul> -->
+            
+            <!-- <div class="account">
+               <a href="sign-in.php"> <i class="fa fa-unlock-alt">login</i></a>
+               <a href="sign-up.php"> <i class="fa fa-user-plus">register</i></a>
+               <a href="logout.php" id="logout"><i class="fa fa-sign-out" aria-hidden="true">logout</i></a>
+            </div> -->
+
+            <!-- <div class="media">
+                <a href="#"><i class="fa fa-whatsapp"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram" ></i></a>
+                <a href="#"><i class="fa fa-twitter" ></i></a>
+                <a href="#"><i class="fa fa-telegram" ></i></a>
+            </div> -->
+    </nav>
+    
+    <i class="fa fa-bars" onclick="showMenu()" id="show"></i>
+</section>
+
+    <!-- <form action="" id="myForm">
+        <label for="network">Network <span> *</span></label><br>
+        <select name="network" id="network" onchange="updatePrice()">
+          <option value="network">Choose Network</option>
+          <option value="Mtn">Mtn</option>
+          <option value="Glo">Glo</option>
+          <option value="Airtel">Airtel</option>
+          <option value="Etisalat">Etisalat</option>
+        </select><br>
+        <label for="data plan">Data plan <span> *</span></label>
+        <select name="data_plan" id="data_plan" onchange="updatePrice()">
+          <option value="select">Choose mtn data plan</option>
+          <option value="plan1">Plan 1</option>
+          <option value="plan2">Plan 2</option>
+          <option value="plan3">Plan 3</option>
+          <optgroup value="select"></optgroup>
+          <option value="select">choose glo data plan</option>
+          <option value="plan7">Plan 4</option>
+          <option value="plan8">Plan 5</option>
+          <option value="plan9">Plan 6</option>
+          <optgroup value="select"></optgroup>
+          <option value="select">choose Airtel data plan</option>
+          <option value="plan7">Plan 7</option>
+          <option value="plan8">Plan 8</option>
+          <option value="plan9">Plan 9</option>
+          <optgroup value="select"></optgroup>
+          <option value="select">choose Etisalat data plan</option>
+          <option value="plan10">Plan 10</option>
+          <option value="plan11">Plan 11</option>
+          <option value="plan12">Plan 12</option>
+          
+        </select>
+        <label for="price">Price <span> *</span></label>
+        <input type="text" placeholder="Price will show here." name="price" id="price"><br>
+        <label for="phone">Phone <span> *</span></label>
+        <input type="phone" placeholder="Enter phone number" name="amount"><br>
+        <input type="submit" value="continue" name="proceed" class="submit">
+      </form>
+      
+
+
+      <script>
+
+      function updatePrice() {
+        const networkSelect = document.getElementById("network");
+        const dataPlanSelect = document.getElementById("data_plan");
+        const priceInput = document.getElementById("price");
+      
+        // Define price values for different network and data plan combinations
+        const prices = {
+         Mtn: {
+            plan1: 159,
+            plan2: 289,
+            plan3: 579,
+            plan4: 869,
+            // plan5: 1,449,
+            // plan6: 2,899,
+          },
+          Glo: {
+            plan7: 159,
+            plan8: 299.00,
+            plan9: 599.00,
+            plan10: 899.00,
+            // plan11: 1,499.00,
+            // plan12: 2,899.00,
+
+          },
+          Airtel: {
+            plan13: 120,
+            plan14: 220,
+            plan15: 320,
+          },
+          Etisalat: {
+            plan16: 110,
+            plan17: 210,
+            plan18: 310,
+          },
+        };
+      
+        const selectedNetwork = networkSelect.value;
+        const selectedDataPlan = dataPlanSelect.value;
+      
+        if (selectedNetwork in prices && selectedDataPlan in prices[selectedNetwork]) {
+          const price = prices[selectedNetwork][selectedDataPlan];
+          priceInput.value = price;
+        } else {
+          priceInput.value = ""; // Clear the price input if the combination is not found
+        }
+      }
+    </script> -->
+
+    <script>
+      var navLinks = document.getElementById("navLinks");
+    
+    function showMenu(){
+        navLinks.style.left = "0";
+    }
+    function hideMenu(){
+        navLinks.style.left = "-300px";
+        
+    }
+
+    </script>
+      
+    
+</body>
+</html>

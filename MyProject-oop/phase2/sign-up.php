@@ -2,6 +2,9 @@
 
 
 <?php
+
+require "connector.php";
+
 if(isset($_GET['error'])){
     $error = $_GET['error'];
 if(!empty($error)){
@@ -9,8 +12,6 @@ if(!empty($error)){
 }
 
 }
-
- 
 
 ?>
 
@@ -89,7 +90,7 @@ if(!empty($error)){
                 <p>By clicking the "Register" button below, it means you agree to our <a href="#">Terms & Conditions.</a></p>
                 <input type="submit" value="register" name="signup" id="register">
             </form>
-            <a href="sign-in.php" id="login">login.</a>
+            <a href="../phase2/sign-in.php" id="login">login.</a>
         </div>
         
     </section>

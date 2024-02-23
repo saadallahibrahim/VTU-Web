@@ -2,7 +2,7 @@
 $server = "localhost";
 $username = "root";
 $password = "";
-$db_name = "vtu-app";
+$db_name = "vtu_app";
 $connection = mysqli_connect($server,$username,$password,$db_name);
 
 // if($connection){

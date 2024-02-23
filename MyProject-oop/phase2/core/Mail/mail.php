@@ -51,8 +51,8 @@ public function send_mail()
     //Set this to true if SMTP host requires authentication to send email
     $mail->SMTPAuth = true;
     //Provide username and password     
-    $mail->Username = "Lindahupp12345@gmail.com";
-    $mail->Password = "sxcn fnfi idzl unkz";
+    $mail->Username = "dextertech39@gmail.com";
+    $mail->Password = "drrh gjcv qupv tlqk";
     //If SMTP requires TLS encryption then set it
     $mail->SMTPSecure = "ssl";
     //Set TCP port to connect to 
